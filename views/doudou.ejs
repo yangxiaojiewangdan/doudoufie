@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/iconfont/iconfont.css">
+	</head>
+	<body>
+		<!--
+        	作者：杨晓杰
+        	时间：2018-01-15 上午
+        	描述：登录注册的logo
+        -->
+		<div class="logo">
+			<img src="/img/shopex.png">
+		</div>
+		<!---logo2---->
+		<div class="ecs">
+			<img src="/img/ecshop-logo.png">
+		</div>
+		<!--
+        	作者：offline
+        	时间：2018-01-15
+        	描述：登录注册的div
+        -->
+        <div class="login">
+        	<div class="inp">
+        		<p><input type="text" id="inp1"/ placeholder="用户名"></p>
+        		<p><input type="password" id="psw"/ placeholder="密码"></p>
+        		<p><input type="text" id="inp2" placeholder="验证码"/></p>
+        		<button onclick="regist()">登录</button><br />
+        		<div class="bottom">
+        		<input type="checkbox" id="check"/>
+        		<span>保存登录信息</span>
+        		<span><a>忘记密码？</a></span>
+        		<span><a>去店铺首页>></a></span>
+        		</div>
+        	</div>
+        </div>
+        <div class="moban">
+        	<img src="/img/icloud-bar.png" />
+        </div>
+	</body>
+	<script src="/js/jquery-1.js"></script>
+	<script type="text/javascript">
+			function regist(){
+				$.ajax({
+					url :"/api/doudou4ajax",
+					type : "post",
+					data :{
+						username : $("#inp1").val(),
+						psw : $("#psw").val()
+					},
+					success : function(res){
+						console.log(res);
+						if(res.code==1){
+							location.href="/doudoufie"
+						}else{
+							alert(res.message)
+						}
+					}
+					
+				})
+				
+			}
+		</script>
+</html>

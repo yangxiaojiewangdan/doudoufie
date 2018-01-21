@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: url(../img/ecshop-bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	left: 50px;
+	top:37px;
+}
+.ecs{
+	position: relative;
+	left: 640px;
+	top: 122px;
+}
+.ecs img{
+	position: absolute;
+	width: 255px;
+	height: 65px;
+}
+.login{
+	position: absolute;
+	width: 444px;
+	height: 353px;
+	background: #eae9e9;
+	left: 50%;
+	top: 50%;
+	margin-left: -222px;
+	margin-top: -160px;
+}
+.inp{
+	margin-top: 50px;
+	margin-left: 70px;
+}
+.inp #inp1,#psw,#inp2{
+	width: 300px;
+	height: 50px;
+	border-radius:5px ;
+}
+.inp button{
+	width: 300px;
+	height: 50px;
+	background: #fc7878;
+	border-radius:10px ;
+	margin-top: 20px;
+	color: white;
+}
+.inp span{
+	font-size: 14px;
+	padding-right: 10px;
+}
+.inp span a{
+	color: #41a5e1;
+}
+#check{
+	width: 15px;
+	height: 15px;
+}
+.bottom{
+	margin-top: 10px;
+}
+.moban{
+	position: absolute;
+	left: 531px;
+	top: 555px;
+}

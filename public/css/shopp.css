@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: nones;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+#addshopp{
+	color:white;
+}
+.heard{
+	padding: 10px;
+}
+.heard1{
+	height: 37px;
+	background: #e9e9e9;
+	border-bottom: 0.5px solid #969896;
+}
+.heard1 span{
+	font-size: 18px;
+	line-height: 37px;
+	float: left;
+}
+.heard1 span img{
+	padding-left: 10px;
+	vertical-align: middle;
+}
+.heard1 h4{
+	margin-top: 8px;
+	width: 100px;
+	text-align: center;
+	float: right;
+	background: #c43926;
+	border-radius: 5px;
+	color: white;
+	font-weight: normal;
+}
+.heard2{
+	margin-top: 10px;
+	height: 40px;
+	background: #f3f3f3 url(../img/icon_search.gif) left 10px center no-repeat;
+}
+.heard2 .sel1{
+	width: 160px;
+	height: 23px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.sel2{
+	width: 106px;
+	height: 23px;
+	margin-left: 5px;
+	margin-top:10px ;
+}
+.sel3{
+	width: 75px;
+	height: 23px;
+}
+.sel4{
+	width: 55px;
+	height: 23px;
+}
+.heard2 span{
+	font-size: 14px;
+	line-height: 40px;
+}
+#inp1{
+	width: 100px;
+	height: 18px;
+}
+#btn{
+	width: 57px;
+	height: 26px;
+	background: #ff3f3f;
+	border-radius: 5px;
+	color: white;
+}
+.tab{
+	margin-top:15px ;
+}
+.tab th{
+	background:#f3f3f3;
+}
+.footer{
+	width: 100%;
+	height: 50px;
+}
+.footer p{
+	float: right;
+	line-height: 50px;
+}
+.footer #txt1{
+	width: 25px;
+	height: 15px;
+}
+.footer #spn2{
+	padding:0  10px;
+}
+.footer1{
+	width: 100%;
+	height: 60px;
+	background:#CCCCCC;
+}
+.footer1 p{
+	padding-top:10px ;
+	font-size: 14px;
+	text-align: center;
+	
+}
+.tr{
+	width: 100%;	
+}
+.td1{
+	width: 140px;
+	height: 60px;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td2{
+	width:196.5px ;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td3{
+	width:232px ;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td4{
+	width:147px ;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td5{
+	width:125.5px ;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td6{
+	width:122px ;
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 60px;
+}
+.td7{
+	width:319px ;
+	border: 1px solid #000000;
+}
+.td7 img{
+	vertical-align: middle;
+	padding: 0px 27px;
+}

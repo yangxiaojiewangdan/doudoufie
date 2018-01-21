@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/shopp.css" />
+	</head>
+	<body>
+		<div class="heard">
+			<div class="heard1">
+				<span>ECSHOP-商品列表<img src="../img/jnsy.png"></span>
+				<h4><a href="/html/fenglie.html" id="addshopp">添加新商品</a></h4>
+			</div>
+			<div class="heard2">
+				<select class="sel1">
+					<option><a href="#">所有分类</a></option>
+					<option><a href="#">休闲短裤</a></option>
+					<option><a href="#">牛仔裤</a></option>
+					<option><a href="#">西裤</a></option>
+					<option><a href="#">牛仔中裤</a></option>
+					<option><a href="#">休闲分裤</a></option>
+					<option><a href="#">牛仔中裤</a></option>
+				</select>
+				<select class="sel2">
+					<option><a href="#">所有品牌</a></option>
+					<option><a href="#">kk</a></option>
+					<option><a href="#">溢彩年华</a></option>
+					<option><a href="#">EVENY</a></option>
+					<option><a href="#">圣迪奥</a></option>
+					<option><a href="#">韩都衣舍</a></option>
+					<option><a href="#">太平鸟</a></option>
+				</select>
+				<select class="sel3">
+					<option><a href="#">全部</a></option>
+					<option><a href="#">精品</a></option>
+					<option><a href="#">新品</a></option>
+					<option><a href="#">特价</a></option>
+					<option><a href="#">热销</a></option>
+					<option><a href="#">全部推荐</a></option>
+				</select>
+				<select class="sel4">
+					<option><a href="#">全部</a></option>
+					<option><a href="#">上架</a></option>
+					<option><a href="#">下架</a></option>
+				</select>
+				<span>关键字</span>
+				<input type="text" id="inp1"/>
+				<button id="btn">搜索</button>
+			</div>
+			<div class="tab">
+				<table border="1"cellspacing="0"width="100%">
+					<tr>
+						<th height="46px" width="106px">编号</th>
+						<th width="150px">商品名称</th>
+						<th width="177px">货号</th>
+						<th width="112px">价格</th>
+						<th width="96px">库存</th>
+						<th width="93px">虚拟销量</th>
+						<th width="242px">操作</th>
+					</tr>
+				</table>
+			</div>
+				<div class="footer">
+					<p>总计 <span id="spn1">0</span>个记录分为一页 当前第一页，每页<input type="text" id="txt1"><span id="spn2">|</span><a href="#">第一页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">最末页</a></p>		
+			</div>
+			<div class="footer1">
+				<p>共执行 7 个查询，用时 0.022958 秒，Gzip 已禁用，内存占用 3.564 MB<br />
+				 版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.js" ></script>
+<script type="text/javascript">
+	//从后台拿数据
+function add(){
+		$.ajax({
+			type:"post",
+			url:"/doudou",
+			data:{
+				shoppnum : ""
+			},
+			success: function (res) {
+				/*console.log(res);*/
+				var len = res.length;
+				for (var i = 0;i < len ;i ++) {
+					/*console.log(res[i])*/
+					var td = `<tr>
+					<td class="td1">${res[i].shoppnum}</td>
+					<td class="td2">${res[i].shoppname}</td>
+					<td class="td3">${res[i].shoppnum2}</td>
+					<td class="td4">${res[i].shoppxiao}</td>
+					<td class="td5">${res[i].shoppkucun}</td>
+					<td class="td6">${res[i].shoppprice}</td>
+					<td class="td7"><img src='../img/icon_view.gif'>
+									<img src='../img/icon_edit.gif'>
+									<img src='../img/icon_trash.gif'>
+									<img src='../img/icon_copy.gif'>
+									</td>`
+					$(".tab").append(td);
+					
+				}
+			}
+		});
+	}
+	add();
+
+</script>
